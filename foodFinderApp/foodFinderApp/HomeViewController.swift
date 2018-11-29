@@ -37,7 +37,7 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController!.navigationBar.isHidden = true;
+        //self.navigationController!.navigationBar.isHidden = true;
         self.becomeFirstResponder()
         
         if CLLocationManager.locationServicesEnabled(){

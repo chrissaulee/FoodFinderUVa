@@ -2,16 +2,35 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>nice</string>
+	<key>NSLocationUsageDescription</key>
+	<string>here</string>
 	<key>NSAppleMusicUsageDescription</key>
-	<string>This app needs access to your media library to operate</string>
+	<string>need to access media library</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>This app needs your location to operate.</string>
+	<string>need to access location</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>need to access photo library</string>
+	<key>NSCameraUsageDescription</key>
+	<string>camera description</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
 	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSExceptionDomains</key>
+		<dict>
+			<key>stardock.cs.virginia.edu</key>
+			<dict>
+				<key>NSThirdPartyExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+			</dict>
+		</dict>
+	</dict>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -29,11 +48,9 @@
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>
-	<array/>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>This app needs access to your photo library to operate</string>
-	<key>NSCameraUsageDescription</key>
-	<string>this app needs your camera to operate</string>
+	<array>
+		<string>armv7</string>
+	</array>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
