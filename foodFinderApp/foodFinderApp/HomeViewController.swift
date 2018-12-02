@@ -75,7 +75,8 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
     override func prepare(for segue:  UIStoryboardSegue, sender:  Any?){
         if segue.destination is GotDumplingsViewController{
             let vc = segue.destination as? GotDumplingsViewController
-            vc?.location = lat + "," + long
+            vc?.UserLat = lat
+            vc?.UserLong = long
         }
     }
 

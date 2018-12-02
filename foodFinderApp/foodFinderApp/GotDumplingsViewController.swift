@@ -7,15 +7,31 @@
 //
 
 import UIKit
+import GoogleMaps
 
 class GotDumplingsViewController: UIViewController {
 
-    var location : String = ""
+    var UserLat : String = ""
+    var UserLong : String = ""
+    var GDLat : String = "38.034046"
+    var GDLong : String = "-78.506082"
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(location)
+        print(UserLat)
+        print(UserLong)
 
         // Do any additional setup after loading the view.
+    }
+    
+    override func loadView() {
+        let camera = GMSCameraPosition.camera(withLatitude: Double(UserLat)!, longitude: Double(UserLong)!, zoom:  6)
+        let mapView = GMSMapView.map(withFrame:  CGRect.zero, camera:  camera)
+        view = mapView
+        
+        let marker = GMSMarker()
+        marker.position = CLLocationCoordinate2D(latitude:  Double(UserLat)!, longitude:  Double(UserLong)!)
+        marker.title = "You"
+        marker.map = mapView
     }
     
 
