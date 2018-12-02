@@ -16,6 +16,10 @@
 		C854762B219E599F005D77F4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C854762A219E599F005D77F4 /* ProfileViewController.swift */; };
 		C8D5284121AF84B8005352AE /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D5284021AF84B8005352AE /* AboutViewController.swift */; };
 		C8D5284321B47DBB005352AE /* GotDumplingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D5284221B47DBB005352AE /* GotDumplingsViewController.swift */; };
+		C8D5284521B48B35005352AE /* TakoNakoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D5284421B48B35005352AE /* TakoNakoViewController.swift */; };
+		C8D5284721B48D2F005352AE /* ChicFilAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D5284621B48D2F005352AE /* ChicFilAViewController.swift */; };
+		C8D5284921B48D47005352AE /* ArgoTeaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D5284821B48D47005352AE /* ArgoTeaViewController.swift */; };
+		C8D5284B21B48D5E005352AE /* SubwayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D5284A21B48D5E005352AE /* SubwayViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +36,10 @@
 		C854762A219E599F005D77F4 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		C8D5284021AF84B8005352AE /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		C8D5284221B47DBB005352AE /* GotDumplingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GotDumplingsViewController.swift; sourceTree = "<group>"; };
+		C8D5284421B48B35005352AE /* TakoNakoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakoNakoViewController.swift; sourceTree = "<group>"; };
+		C8D5284621B48D2F005352AE /* ChicFilAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChicFilAViewController.swift; sourceTree = "<group>"; };
+		C8D5284821B48D47005352AE /* ArgoTeaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArgoTeaViewController.swift; sourceTree = "<group>"; };
+		C8D5284A21B48D5E005352AE /* SubwayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubwayViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +101,10 @@
 				C854762A219E599F005D77F4 /* ProfileViewController.swift */,
 				C8D5284021AF84B8005352AE /* AboutViewController.swift */,
 				C8D5284221B47DBB005352AE /* GotDumplingsViewController.swift */,
+				C8D5284421B48B35005352AE /* TakoNakoViewController.swift */,
+				C8D5284621B48D2F005352AE /* ChicFilAViewController.swift */,
+				C8D5284821B48D47005352AE /* ArgoTeaViewController.swift */,
+				C8D5284A21B48D5E005352AE /* SubwayViewController.swift */,
 			);
 			path = foodFinderApp;
 			sourceTree = "<group>";
@@ -217,7 +229,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8D5284921B48D47005352AE /* ArgoTeaViewController.swift in Sources */,
+				C8D5284521B48B35005352AE /* TakoNakoViewController.swift in Sources */,
+				C8D5284721B48D2F005352AE /* ChicFilAViewController.swift in Sources */,
 				C8547617219E2BB5005D77F4 /* AppDelegate.swift in Sources */,
+				C8D5284B21B48D5E005352AE /* SubwayViewController.swift in Sources */,
 				C8D5284321B47DBB005352AE /* GotDumplingsViewController.swift in Sources */,
 				C854762B219E599F005D77F4 /* ProfileViewController.swift in Sources */,
 				C8D5284121AF84B8005352AE /* AboutViewController.swift in Sources */,
