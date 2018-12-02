@@ -49,6 +49,7 @@ class GotDumplingsViewController: UIViewController {
         marker2.title = "Got Dumplings"
         marker2.map = mapView
         
+        // https://stackoverflow.com/questions/42136203/how-to-draw-routes-between-two-locations-in-google-maps-ios-swift - used link to draw route
         URLSession.shared.dataTask(with:  url!, completionHandler: {
             (data, response, error) in
             if(error != nil){
