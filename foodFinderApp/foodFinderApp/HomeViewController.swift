@@ -107,6 +107,20 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
             vc?.UserLong = long
             vc?.UserLocation = lat + "," + long
         }
+        
+        if segue.destination is FiveGuysViewController{
+            let vc = segue.destination as? FiveGuysViewController
+            vc?.UserLat = lat
+            vc?.UserLong = long
+            vc?.UserLocation = lat + "," + long
+        }
+        
+        if segue.destination is EinsteinBrosViewController{
+            let vc = segue.destination as? EinsteinBrosViewController
+            vc?.UserLat = lat
+            vc?.UserLong = long
+            vc?.UserLocation = lat + "," + long
+        }
     
     }
 

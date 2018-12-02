@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		46C83D4721B497860068FA95 /* FiveGuysViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C83D4621B497860068FA95 /* FiveGuysViewController.swift */; };
+		46C83D4921B497930068FA95 /* EinsteinBrosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C83D4821B497930068FA95 /* EinsteinBrosViewController.swift */; };
 		C304C2FD330CAB56E7BA869B /* Pods_foodFinderApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B7A9E92B734F63D69C737AF /* Pods_foodFinderApp.framework */; };
 		C8547617219E2BB5005D77F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8547616219E2BB5005D77F4 /* AppDelegate.swift */; };
 		C854761C219E2BB5005D77F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C854761A219E2BB5005D77F4 /* Main.storyboard */; };
@@ -24,6 +26,8 @@
 
 /* Begin PBXFileReference section */
 		170F6A4767119E78D2D1A0AD /* Pods-foodFinderApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-foodFinderApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-foodFinderApp/Pods-foodFinderApp.release.xcconfig"; sourceTree = "<group>"; };
+		46C83D4621B497860068FA95 /* FiveGuysViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveGuysViewController.swift; sourceTree = "<group>"; };
+		46C83D4821B497930068FA95 /* EinsteinBrosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EinsteinBrosViewController.swift; sourceTree = "<group>"; };
 		5B7A9E92B734F63D69C737AF /* Pods_foodFinderApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_foodFinderApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFE5296A81EBF00F0E25B9AA /* Pods-foodFinderApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-foodFinderApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-foodFinderApp/Pods-foodFinderApp.debug.xcconfig"; sourceTree = "<group>"; };
 		C8547613219E2BB5005D77F4 /* foodFinderApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = foodFinderApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -105,6 +109,8 @@
 				C8D5284621B48D2F005352AE /* ChicFilAViewController.swift */,
 				C8D5284821B48D47005352AE /* ArgoTeaViewController.swift */,
 				C8D5284A21B48D5E005352AE /* SubwayViewController.swift */,
+				46C83D4621B497860068FA95 /* FiveGuysViewController.swift */,
+				46C83D4821B497930068FA95 /* EinsteinBrosViewController.swift */,
 			);
 			path = foodFinderApp;
 			sourceTree = "<group>";
@@ -234,7 +240,9 @@
 				C8D5284721B48D2F005352AE /* ChicFilAViewController.swift in Sources */,
 				C8547617219E2BB5005D77F4 /* AppDelegate.swift in Sources */,
 				C8D5284B21B48D5E005352AE /* SubwayViewController.swift in Sources */,
+				46C83D4921B497930068FA95 /* EinsteinBrosViewController.swift in Sources */,
 				C8D5284321B47DBB005352AE /* GotDumplingsViewController.swift in Sources */,
+				46C83D4721B497860068FA95 /* FiveGuysViewController.swift in Sources */,
 				C854762B219E599F005D77F4 /* ProfileViewController.swift in Sources */,
 				C8D5284121AF84B8005352AE /* AboutViewController.swift in Sources */,
 				C8547629219E54F8005D77F4 /* HomeViewController.swift in Sources */,
