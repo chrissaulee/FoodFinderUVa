@@ -77,6 +77,7 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
             let vc = segue.destination as? GotDumplingsViewController
             vc?.UserLat = lat
             vc?.UserLong = long
+            vc?.UserLocation = lat + "," + long
         }
     }
 
