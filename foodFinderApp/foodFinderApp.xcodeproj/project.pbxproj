@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C304C2FD330CAB56E7BA869B /* Pods_foodFinderApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B7A9E92B734F63D69C737AF /* Pods_foodFinderApp.framework */; };
 		C8547617219E2BB5005D77F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8547616219E2BB5005D77F4 /* AppDelegate.swift */; };
 		C8547619219E2BB5005D77F4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8547618219E2BB5005D77F4 /* ViewController.swift */; };
 		C854761C219E2BB5005D77F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C854761A219E2BB5005D77F4 /* Main.storyboard */; };
@@ -18,6 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		170F6A4767119E78D2D1A0AD /* Pods-foodFinderApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-foodFinderApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-foodFinderApp/Pods-foodFinderApp.release.xcconfig"; sourceTree = "<group>"; };
+		5B7A9E92B734F63D69C737AF /* Pods_foodFinderApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_foodFinderApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFE5296A81EBF00F0E25B9AA /* Pods-foodFinderApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-foodFinderApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-foodFinderApp/Pods-foodFinderApp.debug.xcconfig"; sourceTree = "<group>"; };
 		C8547613219E2BB5005D77F4 /* foodFinderApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = foodFinderApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8547616219E2BB5005D77F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C8547618219E2BB5005D77F4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,17 +39,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C304C2FD330CAB56E7BA869B /* Pods_foodFinderApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		53BF96BC4F5932A180506109 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5B7A9E92B734F63D69C737AF /* Pods_foodFinderApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		673C75DF03994BAC61213887 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BFE5296A81EBF00F0E25B9AA /* Pods-foodFinderApp.debug.xcconfig */,
+				170F6A4767119E78D2D1A0AD /* Pods-foodFinderApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		C854760A219E2BB5005D77F4 = {
 			isa = PBXGroup;
 			children = (
 				C8547615219E2BB5005D77F4 /* foodFinderApp */,
 				C8547614219E2BB5005D77F4 /* Products */,
+				673C75DF03994BAC61213887 /* Pods */,
+				53BF96BC4F5932A180506109 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -80,9 +104,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C8547625219E2BB6005D77F4 /* Build configuration list for PBXNativeTarget "foodFinderApp" */;
 			buildPhases = (
+				933835A7BE2CB928FFE3A2CF /* [CP] Check Pods Manifest.lock */,
 				C854760F219E2BB5005D77F4 /* Sources */,
 				C8547610219E2BB5005D77F4 /* Frameworks */,
 				C8547611219E2BB5005D77F4 /* Resources */,
+				D37736B51976E28712DDD84B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -138,6 +164,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		933835A7BE2CB928FFE3A2CF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-foodFinderApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D37736B51976E28712DDD84B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-foodFinderApp/Pods-foodFinderApp-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-foodFinderApp/Pods-foodFinderApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C854760F219E2BB5005D77F4 /* Sources */ = {
@@ -292,6 +365,7 @@
 		};
 		C8547626219E2BB6005D77F4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BFE5296A81EBF00F0E25B9AA /* Pods-foodFinderApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -309,6 +383,7 @@
 		};
 		C8547627219E2BB6005D77F4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 170F6A4767119E78D2D1A0AD /* Pods-foodFinderApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
