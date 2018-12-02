@@ -10,8 +10,10 @@ import UIKit
 
 class GotDumplingsViewController: UIViewController {
 
+    var location : String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(location)
 
         // Do any additional setup after loading the view.
     }

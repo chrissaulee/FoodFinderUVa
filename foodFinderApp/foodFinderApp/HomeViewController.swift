@@ -5,6 +5,7 @@
 //  Created by Jessica Ewing on 11/15/18.
 //  Copyright © 2018 Jessica Ewing. All rights reserved.
 //
+// api key = AIzaSyCyjVz2hWM2TdgAixEyvMVrXiowM44Xgfg
 
 import UIKit
 import CoreLocation
@@ -16,6 +17,8 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
     var locationManager:  CLLocationManager?
     lazy var motionManager = CMMotionManager()
     @IBOutlet weak var minutesToSwitch: UILabel!
+    var lat : String = ""
+    var long : String = ""
     
     // GPS
     func createLocationManager(StartImmediately: Bool){
@@ -31,8 +34,8 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
     
     func locationManager(_ manageR: CLLocationManager, didUpdateLocations locations: [CLLocation]){
         let userLocation:CLLocation = locations[0] as CLLocation
-        let lat = String(userLocation.coordinate.latitude)
-        let long = String(userLocation.coordinate.longitude)
+        lat = String(userLocation.coordinate.latitude)
+        long = String(userLocation.coordinate.longitude)
         GPSLabel.text = lat + ", " + long
     }
 
@@ -68,17 +71,11 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
         // Do any additional setup after loading the view.
     }
     
-    // Device Shake
-    override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
-        if motion == .motionShake {
-            self.viewDidLoad()
-            print("reload")
-        }
-    }
-    
-    override var canBecomeFirstResponder: Bool {
-        get {
-            return true
+    // pass data
+    override func prepare(for segue:  UIStoryboardSegue, sender:  Any?){
+        if segue.destination is GotDumplingsViewController{
+            let vc = segue.destination as? GotDumplingsViewController
+            vc?.location = lat + "," + long
         }
     }
 
