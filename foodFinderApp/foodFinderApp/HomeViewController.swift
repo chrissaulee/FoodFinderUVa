@@ -15,6 +15,7 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var GPSLabel: UILabel!
     var locationManager:  CLLocationManager?
     lazy var motionManager = CMMotionManager()
+    @IBOutlet weak var minutesToSwitch: UILabel!
     
     // GPS
     func createLocationManager(StartImmediately: Bool){

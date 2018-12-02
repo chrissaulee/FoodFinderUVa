@@ -16,6 +16,7 @@
 		C8547629219E54F8005D77F4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8547628219E54F8005D77F4 /* HomeViewController.swift */; };
 		C854762B219E599F005D77F4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C854762A219E599F005D77F4 /* ProfileViewController.swift */; };
 		C8D5284121AF84B8005352AE /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D5284021AF84B8005352AE /* AboutViewController.swift */; };
+		C8D5284321B47DBB005352AE /* GotDumplingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D5284221B47DBB005352AE /* GotDumplingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		C8547628219E54F8005D77F4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C854762A219E599F005D77F4 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		C8D5284021AF84B8005352AE /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		C8D5284221B47DBB005352AE /* GotDumplingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GotDumplingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 				C8547628219E54F8005D77F4 /* HomeViewController.swift */,
 				C854762A219E599F005D77F4 /* ProfileViewController.swift */,
 				C8D5284021AF84B8005352AE /* AboutViewController.swift */,
+				C8D5284221B47DBB005352AE /* GotDumplingsViewController.swift */,
 			);
 			path = foodFinderApp;
 			sourceTree = "<group>";
@@ -219,6 +222,7 @@
 			files = (
 				C8547619219E2BB5005D77F4 /* ViewController.swift in Sources */,
 				C8547617219E2BB5005D77F4 /* AppDelegate.swift in Sources */,
+				C8D5284321B47DBB005352AE /* GotDumplingsViewController.swift in Sources */,
 				C854762B219E599F005D77F4 /* ProfileViewController.swift in Sources */,
 				C8D5284121AF84B8005352AE /* AboutViewController.swift in Sources */,
 				C8547629219E54F8005D77F4 /* HomeViewController.swift in Sources */,
