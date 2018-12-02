@@ -357,10 +357,10 @@
             </objects>
             <point key="canvasLocation" x="4558" y="-277"/>
         </scene>
-        <!--View Controller-->
+        <!--Subway View Controller-->
         <scene sceneID="4mC-ve-IGI">
             <objects>
-                <viewController id="giA-55-UPt" sceneMemberID="viewController">
+                <viewController id="giA-55-UPt" customClass="SubwayViewController" customModule="foodFinderApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="z1l-Kt-fhv">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -372,10 +372,10 @@
             </objects>
             <point key="canvasLocation" x="1410" y="1235"/>
         </scene>
-        <!--View Controller-->
+        <!--Argo Tea View Controller-->
         <scene sceneID="4ek-yT-JDw">
             <objects>
-                <viewController id="WDm-hP-sdi" sceneMemberID="viewController">
+                <viewController id="WDm-hP-sdi" customClass="ArgoTeaViewController" customModule="foodFinderApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QKb-Va-eHZ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -452,9 +452,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Image" width="1080" height="1080"/>
-        <image name="Image-1" width="575" height="431"/>
+        <image name="Image" width="540" height="540"/>
+        <image name="Image-1" width="287" height="215"/>
         <image name="chicflia" width="1450" height="724"/>
-        <image name="takonako" width="750" height="562.5"/>
+        <image name="takonako" width="1000" height="750"/>
     </resources>
 </document>

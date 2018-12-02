@@ -79,6 +79,35 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
             vc?.UserLong = long
             vc?.UserLocation = lat + "," + long
         }
+        
+        if segue.destination is TakoNakoViewController{
+            let vc = segue.destination as? TakoNakoViewController
+            vc?.UserLat = lat
+            vc?.UserLong = long
+            vc?.UserLocation = lat + "," + long
+        }
+        
+        if segue.destination is ChicFilAViewController{
+            let vc = segue.destination as? ChicFilAViewController
+            vc?.UserLat = lat
+            vc?.UserLong = long
+            vc?.UserLocation = lat + "," + long
+        }
+        
+        if segue.destination is ArgoTeaViewController{
+            let vc = segue.destination as? ArgoTeaViewController
+            vc?.UserLat = lat
+            vc?.UserLong = long
+            vc?.UserLocation = lat + "," + long
+        }
+        
+        if segue.destination is SubwayViewController{
+            let vc = segue.destination as? SubwayViewController
+            vc?.UserLat = lat
+            vc?.UserLong = long
+            vc?.UserLocation = lat + "," + long
+        }
+    
     }
 
     /*
