@@ -61,7 +61,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wsc-aY-U88">
-                                                <rect key="frame" x="77" y="250" width="166" height="124"/>
+                                                <rect key="frame" x="77" y="237" width="166" height="124"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Button" image="takonako"/>
                                                 <connections>
@@ -69,29 +69,14 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Got Dumplings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gtD-Wg-c0c">
-                                                <rect key="frame" x="101" y="66" width="114" height="21"/>
+                                                <rect key="frame" x="118" y="194" width="114" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" red="1" green="0.97925833640000004" blue="0.99775248829999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tako Nako" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Qe-kk-oso">
-                                                <rect key="frame" x="120" y="223" width="80" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gjd-iI-vYp">
-                                                <rect key="frame" x="10" y="503" width="302" height="96"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Button" image="therealtea"/>
-                                                <connections>
-                                                    <segue destination="WDm-hP-sdi" kind="show" id="WQ1-hz-fuW"/>
-                                                </connections>
-                                            </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7dy-Z0-wF4">
-                                                <rect key="frame" x="12" y="607" width="296" height="73"/>
+                                                <rect key="frame" x="12" y="593" width="296" height="73"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Button" image="subway"/>
                                                 <connections>
@@ -99,27 +84,35 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Rg-2w-jUn">
-                                                <rect key="frame" x="59" y="403" width="202" height="92"/>
+                                                <rect key="frame" x="59" y="392" width="202" height="92"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Button" image="chicflia"/>
                                                 <connections>
                                                     <segue destination="Pks-8g-S8E" kind="show" id="wdb-8B-du2"/>
                                                 </connections>
                                             </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ABt-ov-zXa">
+                                                <rect key="frame" x="50" y="772" width="221" height="136"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Button" image="bros"/>
+                                                <connections>
+                                                    <segue destination="Knh-ja-4Ko" kind="show" id="dir-yF-1i8"/>
+                                                </connections>
+                                            </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tyC-cs-hU5">
-                                                <rect key="frame" x="10" y="708" width="301" height="78"/>
+                                                <rect key="frame" x="13" y="688" width="298" height="63"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Button" image="5guys"/>
                                                 <connections>
                                                     <segue destination="dB8-Ru-Ih2" kind="show" id="ZMR-sK-oXL"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ABt-ov-zXa">
-                                                <rect key="frame" x="40" y="794" width="221" height="136"/>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gjd-iI-vYp">
+                                                <rect key="frame" x="12" y="502" width="300" height="83"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Button" image="bros"/>
+                                                <state key="normal" title="Button" image="therealtea"/>
                                                 <connections>
-                                                    <segue destination="Knh-ja-4Ko" kind="show" id="dir-yF-1i8"/>
+                                                    <segue destination="WDm-hP-sdi" kind="show" id="WQ1-hz-fuW"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -366,10 +359,10 @@
             </objects>
             <point key="canvasLocation" x="4558" y="-277"/>
         </scene>
-        <!--Five Guys View Controller-->
+        <!--Five Guys-->
         <scene sceneID="qjT-rf-Cs7">
             <objects>
-                <viewController id="dB8-Ru-Ih2" customClass="FiveGuysViewController" customModule="foodFinderApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Five Guys" id="dB8-Ru-Ih2" customClass="FiveGuysViewController" customModule="foodFinderApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VBg-1M-XWa">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -381,10 +374,10 @@
             </objects>
             <point key="canvasLocation" x="609" y="881"/>
         </scene>
-        <!--Subway View Controller-->
+        <!--Subway-->
         <scene sceneID="4mC-ve-IGI">
             <objects>
-                <viewController id="giA-55-UPt" customClass="SubwayViewController" customModule="foodFinderApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Subway" id="giA-55-UPt" customClass="SubwayViewController" customModule="foodFinderApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="z1l-Kt-fhv">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -396,10 +389,10 @@
             </objects>
             <point key="canvasLocation" x="1410" y="1235"/>
         </scene>
-        <!--Argo Tea View Controller-->
+        <!--Argo Tea-->
         <scene sceneID="4ek-yT-JDw">
             <objects>
-                <viewController id="WDm-hP-sdi" customClass="ArgoTeaViewController" customModule="foodFinderApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Argo Tea" id="WDm-hP-sdi" customClass="ArgoTeaViewController" customModule="foodFinderApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QKb-Va-eHZ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -411,10 +404,10 @@
             </objects>
             <point key="canvasLocation" x="2431" y="1332"/>
         </scene>
-        <!--Chic FilA View Controller-->
+        <!--Chic Fil A-->
         <scene sceneID="dim-hu-qdh">
             <objects>
-                <viewController id="Pks-8g-S8E" customClass="ChicFilAViewController" customModule="foodFinderApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Chic Fil A" id="Pks-8g-S8E" customClass="ChicFilAViewController" customModule="foodFinderApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="m0N-FO-Tim">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -426,10 +419,10 @@
             </objects>
             <point key="canvasLocation" x="3395" y="1415"/>
         </scene>
-        <!--Tako Nako View Controller-->
+        <!--Tako Nako-->
         <scene sceneID="xoq-dB-puP">
             <objects>
-                <viewController id="JL6-mr-VvN" customClass="TakoNakoViewController" customModule="foodFinderApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Tako Nako" id="JL6-mr-VvN" customClass="TakoNakoViewController" customModule="foodFinderApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="k3T-T8-A7t">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -441,25 +434,35 @@
             </objects>
             <point key="canvasLocation" x="4517" y="1266"/>
         </scene>
-        <!--Got Dumplings View Controller-->
+        <!--Got Dumplings-->
         <scene sceneID="nAj-m7-hTl">
             <objects>
-                <viewController id="ccl-iH-Gpi" customClass="GotDumplingsViewController" customModule="foodFinderApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Got Dumplings" id="ccl-iH-Gpi" customClass="GotDumplingsViewController" customModule="foodFinderApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lXn-Om-8c4">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="khU-Z4-sx6" customClass="GMSMapView">
+                                <rect key="frame" x="16" y="88" width="288" height="316"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="8XS-hM-Hhg"/>
                     </view>
+                    <connections>
+                        <outlet property="myMapView" destination="khU-Z4-sx6" id="sKx-Vh-YBk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uSD-9v-DSc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5386" y="850"/>
+            <point key="canvasLocation" x="5385" y="849.29577464788736"/>
         </scene>
-        <!--Einstein Bros View Controller-->
+        <!--Einstein Bros-->
         <scene sceneID="K52-kt-aLx">
             <objects>
-                <viewController id="Knh-ja-4Ko" customClass="EinsteinBrosViewController" customModule="foodFinderApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Einstein Bros" id="Knh-ja-4Ko" customClass="EinsteinBrosViewController" customModule="foodFinderApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ofV-1c-erK">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -492,12 +495,12 @@
     </scenes>
     <resources>
         <image name="5guys" width="596" height="84"/>
-        <image name="Image" width="540" height="540"/>
-        <image name="Image-1" width="287" height="215"/>
+        <image name="Image" width="1080" height="1080"/>
+        <image name="Image-1" width="575" height="431"/>
         <image name="bros" width="372" height="239"/>
         <image name="chicflia" width="1450" height="724"/>
         <image name="subway" width="5000" height="1437"/>
-        <image name="takonako" width="1000" height="750"/>
-        <image name="therealtea" width="948" height="222"/>
+        <image name="takonako" width="750" height="562.5"/>
+        <image name="therealtea" width="711" height="166.5"/>
     </resources>
 </document>

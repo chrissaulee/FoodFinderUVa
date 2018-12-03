@@ -18,38 +18,29 @@ class GotDumplingsViewController: UIViewController {
     var GDLong : String = "-78.506082"
     var GDLocation: String = "38.034046,-78.506082"
     var urlString : String = ""
+    @IBOutlet weak var myMapView: GMSMapView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //print(UserLat)
-        //print(UserLong)
-        //print(UserLocation)
-        //print(GDLocation)
         
-
-
-        // Do any additional setup after loading the view.
-    }
-    
-    override func loadView() {
-        urlString = "https://maps.googleapis.com/maps/api/directions/json?origin=\(UserLocation)&destination=\(GDLocation)&mode=walking&key=AIzaSyCyjVz2hWM2TdgAixEyvMVrXiowM44Xgfg"
-        let url = URL(string:  urlString)
-        
-        let camera = GMSCameraPosition.camera(withLatitude: Double(UserLat)!, longitude: Double(UserLong)!, zoom:  16)
-        let mapView = GMSMapView.map(withFrame:  CGRect.zero, camera:  camera)
-        view = mapView
+        let camera = GMSCameraPosition.camera(withLatitude: Double(self.UserLat)!, longitude: Double(self.UserLong)!, zoom:  16)
+        self.myMapView.camera = camera
         
         let marker = GMSMarker()
         marker.position = CLLocationCoordinate2D(latitude:  Double(UserLat)!, longitude:  Double(UserLong)!)
         marker.title = "You"
-        marker.map = mapView
+        marker.map = myMapView
         
         let marker2 = GMSMarker()
         marker2.position = CLLocationCoordinate2D(latitude:  Double(GDLat)!, longitude:  Double(GDLong)!)
         marker2.title = "Got Dumplings"
-        marker2.map = mapView
+        marker2.map = myMapView
         
-        // https://stackoverflow.com/questions/42136203/how-to-draw-routes-between-two-locations-in-google-maps-ios-swift - used link to draw route
+        
+        urlString = "https://maps.googleapis.com/maps/api/directions/json?origin=\(UserLocation)&destination=\(GDLocation)&mode=walking&key=AIzaSyCyjVz2hWM2TdgAixEyvMVrXiowM44Xgfg"
+        let url = URL(string:  urlString)
+        
+        
         URLSession.shared.dataTask(with:  url!, completionHandler: {
             (data, response, error) in
             if(error != nil){
@@ -69,29 +60,28 @@ class GotDumplingsViewController: UIViewController {
                             polyline.strokeWidth = 3
                             
                             let bounds = GMSCoordinateBounds(path: path!)
-                            mapView.animate(with: GMSCameraUpdate.fit(bounds, withPadding: 30.0))
+                            self.myMapView.animate(with: GMSCameraUpdate.fit(bounds, withPadding: 30.0))
                             
-                            polyline.map = mapView
+                            polyline.map = self.myMapView
                         }
                     })
                 }
-                catch let error as NSError{
+                catch _ as NSError{
                     print("error:/(error)")
                 }
             }
         }).resume()
+        
+
+        //setUpMap()
+        
+
+      //   Do any additional setup after loading the view.
     }
+
+        //References
+    // https://stackoverflow.com/questions/42136203/how-to-draw-routes-between-two-locations-in-google-maps-ios-swift - used link to draw route
+    //https://stackoverflow.com/questions/40064779/google-maps-gmsmapview-on-custom-uiview
     
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
