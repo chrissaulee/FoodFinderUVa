@@ -366,9 +366,19 @@
                     <view key="view" contentMode="scaleToFill" id="VBg-1M-XWa">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hfd-9G-iO4" customClass="GMSMapView">
+                                <rect key="frame" x="16" y="88" width="288" height="316"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="TjL-73-WNw"/>
                     </view>
+                    <connections>
+                        <outlet property="fiveView" destination="hfd-9G-iO4" id="wpZ-NW-DwC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nN9-Xl-d03" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -381,9 +391,19 @@
                     <view key="view" contentMode="scaleToFill" id="z1l-Kt-fhv">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="30g-Ru-Dy9" customClass="GMSMapView">
+                                <rect key="frame" x="16" y="85" width="288" height="316"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="0Iu-XE-8S7"/>
                     </view>
+                    <connections>
+                        <outlet property="subView" destination="30g-Ru-Dy9" id="GJT-kf-g1H"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="caf-qR-MRL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -396,9 +416,19 @@
                     <view key="view" contentMode="scaleToFill" id="QKb-Va-eHZ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dKD-Dt-jsh" customClass="GMSMapView">
+                                <rect key="frame" x="16" y="90" width="288" height="316"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="smk-nH-GEW"/>
                     </view>
+                    <connections>
+                        <outlet property="argoView" destination="dKD-Dt-jsh" id="MgR-PR-Q20"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r4b-Dz-YNn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -411,9 +441,19 @@
                     <view key="view" contentMode="scaleToFill" id="m0N-FO-Tim">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6kq-iM-agB" customClass="GMSMapView">
+                                <rect key="frame" x="16" y="91" width="288" height="316"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Lth-uJ-d5f"/>
                     </view>
+                    <connections>
+                        <outlet property="chicView" destination="6kq-iM-agB" id="jRr-er-S6e"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vvx-Zv-J3b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -426,9 +466,19 @@
                     <view key="view" contentMode="scaleToFill" id="k3T-T8-A7t">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZO5-cX-Qmi" customClass="GMSMapView">
+                                <rect key="frame" x="16" y="87" width="288" height="316"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="P3a-to-uq9"/>
                     </view>
+                    <connections>
+                        <outlet property="takoView" destination="ZO5-cX-Qmi" id="ajv-TD-fD2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iG2-KA-qr6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -466,9 +516,19 @@
                     <view key="view" contentMode="scaleToFill" id="ofV-1c-erK">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Eud-AE-Cy0" customClass="GMSMapView">
+                                <rect key="frame" x="16" y="90" width="288" height="316"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="bae-vs-S0f"/>
                     </view>
+                    <connections>
+                        <outlet property="brosView" destination="Eud-AE-Cy0" id="Tx0-Ii-A93"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LSE-IL-hO7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

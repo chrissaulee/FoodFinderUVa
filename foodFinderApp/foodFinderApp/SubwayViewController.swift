@@ -19,27 +19,25 @@ class SubwayViewController: UIViewController {
     var SubwayLocation: String = "38.035643,-78.506838"
     var urlString : String = ""
     
+    @IBOutlet weak var subView: GMSMapView!
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-    
-    override func loadView() {
+        
         urlString = "https://maps.googleapis.com/maps/api/directions/json?origin=\(UserLocation)&destination=\(SubwayLocation)&mode=walking&key=AIzaSyCyjVz2hWM2TdgAixEyvMVrXiowM44Xgfg"
         let url = URL(string:  urlString)
         
         let camera = GMSCameraPosition.camera(withLatitude: Double(UserLat)!, longitude: Double(UserLong)!, zoom:  16)
-        let mapView = GMSMapView.map(withFrame:  CGRect.zero, camera:  camera)
-        view = mapView
+        self.subView.camera = camera
         
         let marker = GMSMarker()
         marker.position = CLLocationCoordinate2D(latitude:  Double(UserLat)!, longitude:  Double(UserLong)!)
         marker.title = "You"
-        marker.map = mapView
+        marker.map = subView
         
         let marker2 = GMSMarker()
         marker2.position = CLLocationCoordinate2D(latitude:  Double(SubwayLat)!, longitude:  Double(SubwayLong)!)
         marker2.title = "Tako Nako"
-        marker2.map = mapView
+        marker2.map = subView
         
         // https://stackoverflow.com/questions/42136203/how-to-draw-routes-between-two-locations-in-google-maps-ios-swift - used link to draw route
         URLSession.shared.dataTask(with:  url!, completionHandler: {
@@ -61,9 +59,9 @@ class SubwayViewController: UIViewController {
                             polyline.strokeWidth = 3
                             
                             let bounds = GMSCoordinateBounds(path: path!)
-                            mapView.animate(with: GMSCameraUpdate.fit(bounds, withPadding: 30.0))
+                            self.subView.animate(with: GMSCameraUpdate.fit(bounds, withPadding: 30.0))
                             
-                            polyline.map = mapView
+                            polyline.map = self.subView
                         }
                     })
                 }
@@ -73,6 +71,7 @@ class SubwayViewController: UIViewController {
             }
         }).resume()
     }
+    
     
     
     
