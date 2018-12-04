@@ -8,6 +8,8 @@
 
 import UIKit
 import GoogleMaps
+import Firebase
+import FirebaseDatabase
 
 class TakoNakoViewController: UIViewController {
     
@@ -18,10 +20,24 @@ class TakoNakoViewController: UIViewController {
     var TNLong : String = "-78.505938"
     var TNLocation: String = "38.034077,-78.505938"
     var urlString : String = ""
+    var ref: DatabaseReference!
+    var dbHandle: DatabaseHandle!
     @IBOutlet weak var takoView: GMSMapView!
+    
+    @IBOutlet weak var takoMenu: UIButton!
+    @IBOutlet weak var takoEta: UILabel!
+    @IBAction func getTakoMenu(_ sender: UIButton) {
+        UIApplication.shared.openURL(NSURL(string: "https://www.yelp.com/biz_photos/el-tako-nako-charlottesville?select=u0KU4rY2vXK1kAxwvNw5uA")! as URL)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        ref = Database.database().reference()
+        dbHandle = ref.child("places/takonako").observe(.value, with: { (data) in
+            let times: Int = (data.value as! Int)
+            self.takoEta.text = String(times)
+        })
         
         urlString = "https://maps.googleapis.com/maps/api/directions/json?origin=\(UserLocation)&destination=\(TNLocation)&mode=walking&key=AIzaSyCyjVz2hWM2TdgAixEyvMVrXiowM44Xgfg"
         let url = URL(string:  urlString)

@@ -7,5 +7,6 @@ target 'foodFinderApp' do
 
   # Pods for foodFinderApp
   pod 'GoogleMaps'
-
+  pod 'Firebase/Core'
+  pod 'Firebase/Database'
 end

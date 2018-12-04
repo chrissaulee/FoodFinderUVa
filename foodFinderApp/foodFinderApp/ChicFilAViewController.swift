@@ -8,6 +8,8 @@
 
 import UIKit
 import GoogleMaps
+import Firebase
+import FirebaseDatabase
 
 class ChicFilAViewController: UIViewController {
     
@@ -18,10 +20,23 @@ class ChicFilAViewController: UIViewController {
     var CFALong : String = "-78.506619"
     var CFALocation: String = "38.035762,-78.506619"
     var urlString : String = ""
+    var ref: DatabaseReference!
+    var dbHandle: DatabaseHandle!
     @IBOutlet weak var chicView: GMSMapView!
+    @IBOutlet weak var chicEta: UILabel!
+    @IBOutlet weak var chicMenu: UIButton!
     
+    @IBAction func chicGetMenu(_ sender: UIButton) {
+        UIApplication.shared.openURL(NSURL(string: "https://www.chick-fil-a.com/")! as URL)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        ref = Database.database().reference()
+        dbHandle = ref.child("places/chicfila").observe(.value, with: { (data) in
+            let times: Int = (data.value as! Int!)
+            self.chicEta.text = String(times)
+        })
         
         urlString = "https://maps.googleapis.com/maps/api/directions/json?origin=\(UserLocation)&destination=\(CFALocation)&mode=walking&key=AIzaSyCyjVz2hWM2TdgAixEyvMVrXiowM44Xgfg"
         let url = URL(string:  urlString)

@@ -69,6 +69,7 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
         }
 
         // Do any additional setup after loading the view.
+        
     }
     
     // pass data

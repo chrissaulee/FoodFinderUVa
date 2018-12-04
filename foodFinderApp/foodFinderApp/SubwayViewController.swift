@@ -8,6 +8,8 @@
 
 import UIKit
 import GoogleMaps
+import Firebase
+import FirebaseDatabase
 
 class SubwayViewController: UIViewController {
     
@@ -18,10 +20,23 @@ class SubwayViewController: UIViewController {
     var SubwayLong : String = "-78.506838"
     var SubwayLocation: String = "38.035643,-78.506838"
     var urlString : String = ""
+    var ref: DatabaseReference!
+    var dbHandle: DatabaseHandle!
+    @IBOutlet weak var subwayEta: UILabel!
+    @IBOutlet weak var subwayMenu: UIButton!
+    @IBAction func subwayGetMenu(_ sender: UIButton) {
+        UIApplication.shared.openURL(NSURL(string: "https://www.subway.com/en-US/MenuNutrition/Menu/All")! as URL)
+    }
     
     @IBOutlet weak var subView: GMSMapView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        ref = Database.database().reference()
+        dbHandle = ref.child("places/subway").observe(.value, with: { (data) in
+            let times: Int = (data.value as! Int!)
+            self.subwayEta.text = String(times)
+        })
         
         urlString = "https://maps.googleapis.com/maps/api/directions/json?origin=\(UserLocation)&destination=\(SubwayLocation)&mode=walking&key=AIzaSyCyjVz2hWM2TdgAixEyvMVrXiowM44Xgfg"
         let url = URL(string:  urlString)

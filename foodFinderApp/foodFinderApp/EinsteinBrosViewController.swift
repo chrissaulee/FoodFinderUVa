@@ -8,6 +8,8 @@
 
 import UIKit
 import GoogleMaps
+import Firebase
+import FirebaseDatabase
 
 class EinsteinBrosViewController: UIViewController {
     
@@ -18,10 +20,23 @@ class EinsteinBrosViewController: UIViewController {
     var EBLong : String = "-78.510806"
     var EBLocation: String = "38.031652,-78.510806"
     var urlString : String = ""
+    var ref: DatabaseReference!
+    var dbHandle: DatabaseHandle!
     @IBOutlet weak var brosView: GMSMapView!
     
+    @IBOutlet weak var brosMenu: UIButton!
+    @IBAction func brosGetMenu(_ sender: UIButton) {
+        UIApplication.shared.openURL(NSURL(string: "https://www.einsteinbros.com/menu/bagels-and-shmear")! as URL)
+    }
+    @IBOutlet weak var brosEta: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        ref = Database.database().reference()
+        dbHandle = ref.child("places/bros").observe(.value, with: { (data) in
+            let times: Int = (data.value as! Int!)
+            self.brosEta.text = String(times)
+        })
         urlString = "https://maps.googleapis.com/maps/api/directions/json?origin=\(UserLocation)&destination=\(EBLocation)&mode=walking&key=AIzaSyCyjVz2hWM2TdgAixEyvMVrXiowM44Xgfg"
         let url = URL(string:  urlString)
         

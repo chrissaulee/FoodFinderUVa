@@ -6,5 +6,7 @@ target 'foodFinderApp' do
   use_frameworks!
 
   # Pods for foodFinderApp
+  pod 'GoogleMaps'
+  pod 'Firebase/Core'
 
 end

@@ -8,6 +8,8 @@
 
 import UIKit
 import GoogleMaps
+import Firebase
+import FirebaseDatabase
 
 class ArgoTeaViewController: UIViewController {
     
@@ -18,10 +20,23 @@ class ArgoTeaViewController: UIViewController {
     var ATLong : String = "-78.511211"
     var ATLocation: String = "38.033462,-78.511211"
     var urlString : String = ""
+    var ref: DatabaseReference!
+    var dbHandle: DatabaseHandle!
     @IBOutlet weak var argoView: GMSMapView!
+    @IBOutlet weak var argoEta: UILabel!
+    @IBOutlet weak var argoMenu: UIButton!
+    @IBAction func argoGetMenu(_ sender: UIButton) {
+        UIApplication.shared.openURL(NSURL(string: "https://www.argotea.com/pages/signature-drinks")! as URL)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        ref = Database.database().reference()
+        dbHandle = ref.child("places/argotea").observe(.value, with: { (data) in
+            let times: Int = (data.value as! Int!)
+            self.argoEta.text = String(times)
+        })
         
         urlString = "https://maps.googleapis.com/maps/api/directions/json?origin=\(UserLocation)&destination=\(ATLocation)&mode=walking&key=AIzaSyCyjVz2hWM2TdgAixEyvMVrXiowM44Xgfg"
         let url = URL(string:  urlString)

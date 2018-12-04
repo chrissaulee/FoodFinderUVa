@@ -8,6 +8,8 @@
 
 import UIKit
 import GoogleMaps
+import Firebase
+import FirebaseDatabase
 
 class GotDumplingsViewController: UIViewController {
 
@@ -18,10 +20,25 @@ class GotDumplingsViewController: UIViewController {
     var GDLong : String = "-78.506082"
     var GDLocation: String = "38.034046,-78.506082"
     var urlString : String = ""
+    var ref: DatabaseReference!
+    var dbHandle: DatabaseHandle!
     @IBOutlet weak var myMapView: GMSMapView!
+    @IBOutlet weak var menuButton: UIButton!
+    @IBOutlet weak var waitButton: UIButton!
+    @IBOutlet weak var etaLabel: UILabel!
     
+    @IBAction func getMenu(_ sender: UIButton) {
+        UIApplication.shared.openURL(NSURL(string: "http://www.gotdumplingsandtea.com/menu.html")! as URL)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("loading...")
+        
+        ref = Database.database().reference()
+        dbHandle = ref.child("places/gotdumplings").observe(.value, with: { (data) in
+            let times: Int = (data.value as! Int!)
+            self.etaLabel.text = String(times)
+        })
         
         let camera = GMSCameraPosition.camera(withLatitude: Double(self.UserLat)!, longitude: Double(self.UserLong)!, zoom:  16)
         self.myMapView.camera = camera
@@ -39,6 +56,7 @@ class GotDumplingsViewController: UIViewController {
         
         urlString = "https://maps.googleapis.com/maps/api/directions/json?origin=\(UserLocation)&destination=\(GDLocation)&mode=walking&key=AIzaSyCyjVz2hWM2TdgAixEyvMVrXiowM44Xgfg"
         let url = URL(string:  urlString)
+        
         
         
         URLSession.shared.dataTask(with:  url!, completionHandler: {
@@ -72,6 +90,7 @@ class GotDumplingsViewController: UIViewController {
             }
         }).resume()
         
+        
 
         //setUpMap()
         
@@ -82,6 +101,14 @@ class GotDumplingsViewController: UIViewController {
         //References
     // https://stackoverflow.com/questions/42136203/how-to-draw-routes-between-two-locations-in-google-maps-ios-swift - used link to draw route
     //https://stackoverflow.com/questions/40064779/google-maps-gmsmapview-on-custom-uiview
+    
+//    
+//    func onClick(){
+//        
+//        var ref: DatabaseReference!
+//        
+//        ref = Database.database().reference()
+//    }
     
     
 }

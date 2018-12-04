@@ -16,6 +16,8 @@
 		C8547621219E2BB6005D77F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C854761F219E2BB6005D77F4 /* LaunchScreen.storyboard */; };
 		C8547629219E54F8005D77F4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8547628219E54F8005D77F4 /* HomeViewController.swift */; };
 		C854762B219E599F005D77F4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C854762A219E599F005D77F4 /* ProfileViewController.swift */; };
+		C8B2052721B5FC6400E149CE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C8B2052621B5FC6400E149CE /* GoogleService-Info.plist */; };
+		C8B2052921B603DD00E149CE /* submitWaitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B2052821B603DD00E149CE /* submitWaitViewController.swift */; };
 		C8D5284121AF84B8005352AE /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D5284021AF84B8005352AE /* AboutViewController.swift */; };
 		C8D5284321B47DBB005352AE /* GotDumplingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D5284221B47DBB005352AE /* GotDumplingsViewController.swift */; };
 		C8D5284521B48B35005352AE /* TakoNakoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D5284421B48B35005352AE /* TakoNakoViewController.swift */; };
@@ -38,6 +40,8 @@
 		C8547622219E2BB6005D77F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C8547628219E54F8005D77F4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C854762A219E599F005D77F4 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		C8B2052621B5FC6400E149CE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C8B2052821B603DD00E149CE /* submitWaitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = submitWaitViewController.swift; sourceTree = "<group>"; };
 		C8D5284021AF84B8005352AE /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		C8D5284221B47DBB005352AE /* GotDumplingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GotDumplingsViewController.swift; sourceTree = "<group>"; };
 		C8D5284421B48B35005352AE /* TakoNakoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakoNakoViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +105,7 @@
 				C854761D219E2BB6005D77F4 /* Assets.xcassets */,
 				C854761F219E2BB6005D77F4 /* LaunchScreen.storyboard */,
 				C8547622219E2BB6005D77F4 /* Info.plist */,
+				C8B2052621B5FC6400E149CE /* GoogleService-Info.plist */,
 				C8547628219E54F8005D77F4 /* HomeViewController.swift */,
 				C854762A219E599F005D77F4 /* ProfileViewController.swift */,
 				C8D5284021AF84B8005352AE /* AboutViewController.swift */,
@@ -111,6 +116,7 @@
 				C8D5284A21B48D5E005352AE /* SubwayViewController.swift */,
 				46C83D4621B497860068FA95 /* FiveGuysViewController.swift */,
 				46C83D4821B497930068FA95 /* EinsteinBrosViewController.swift */,
+				C8B2052821B603DD00E149CE /* submitWaitViewController.swift */,
 			);
 			path = foodFinderApp;
 			sourceTree = "<group>";
@@ -127,6 +133,7 @@
 				C8547610219E2BB5005D77F4 /* Frameworks */,
 				C8547611219E2BB5005D77F4 /* Resources */,
 				D37736B51976E28712DDD84B /* [CP] Copy Pods Resources */,
+				959D108D108564AC37E1F570 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -176,6 +183,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C8547621219E2BB6005D77F4 /* LaunchScreen.storyboard in Resources */,
+				C8B2052721B5FC6400E149CE /* GoogleService-Info.plist in Resources */,
 				C854761E219E2BB6005D77F4 /* Assets.xcassets in Resources */,
 				C854761C219E2BB5005D77F4 /* Main.storyboard in Resources */,
 			);
@@ -204,6 +212,32 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		959D108D108564AC37E1F570 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-foodFinderApp/Pods-foodFinderApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-foodFinderApp/Pods-foodFinderApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D37736B51976E28712DDD84B /* [CP] Copy Pods Resources */ = {
@@ -244,6 +278,7 @@
 				C8D5284321B47DBB005352AE /* GotDumplingsViewController.swift in Sources */,
 				46C83D4721B497860068FA95 /* FiveGuysViewController.swift in Sources */,
 				C854762B219E599F005D77F4 /* ProfileViewController.swift in Sources */,
+				C8B2052921B603DD00E149CE /* submitWaitViewController.swift in Sources */,
 				C8D5284121AF84B8005352AE /* AboutViewController.swift in Sources */,
 				C8547629219E54F8005D77F4 /* HomeViewController.swift in Sources */,
 			);

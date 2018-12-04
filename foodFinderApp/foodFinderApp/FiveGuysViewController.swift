@@ -8,6 +8,8 @@
 
 import UIKit
 import GoogleMaps
+import Firebase
+import FirebaseDatabase
 
 class FiveGuysViewController: UIViewController {
     
@@ -18,10 +20,22 @@ class FiveGuysViewController: UIViewController {
     var FiveGuysLong : String = "-78.506751"
     var FiveGuysLocation: String = "38.035666,-78.506751"
     var urlString : String = ""
-    
+    var ref: DatabaseReference!
+    var dbHandle: DatabaseHandle!
+    @IBOutlet weak var fiveMenu: UIButton!
+    @IBOutlet weak var fiveEta: UILabel!
+    @IBAction func fiveGetMenu(_ sender: UIButton) {
+        UIApplication.shared.openURL(NSURL(string: "http://www.fiveguys.com/Menu")! as URL)
+    }
     @IBOutlet weak var fiveView: GMSMapView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        ref = Database.database().reference()
+        dbHandle = ref.child("places/fiveguys").observe(.value, with: { (data) in
+            let times: Int = (data.value as! Int!)
+            self.fiveEta.text = String(times)
+        })
         
         urlString = "https://maps.googleapis.com/maps/api/directions/json?origin=\(UserLocation)&destination=\(FiveGuysLocation)&mode=walking&key=AIzaSyCyjVz2hWM2TdgAixEyvMVrXiowM44Xgfg"
         let url = URL(string:  urlString)
