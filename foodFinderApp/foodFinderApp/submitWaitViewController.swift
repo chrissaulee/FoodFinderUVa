@@ -13,11 +13,13 @@
 import UIKit
 import Firebase
 import FirebaseDatabase
+import CoreData
 
 class submitWaitViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
     var ref: DatabaseReference!
     var dbHandle: DatabaseHandle!
+    var currentPointValue:Int!
     
     let restaurants = ["Got Dumplings","Tako Nako","Chic Fil A","Argo Tea", "Subway", "Five Guys", "Einstein Bros"]
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -69,6 +71,25 @@ class submitWaitViewController: UIViewController, UIPickerViewDelegate, UIPicker
             let alert = UIAlertController(title: "Thanks!", message: "Your wait has been added.", preferredStyle: UIAlertController.Style.alert)
             alert.addAction(UIAlertAction(title: "Get Points", style: UIAlertAction.Style.default, handler: { [weak alert] (_) in
                 print("add 5")
+                guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+                    return
+                }
+                //print("NO ERRORS UNTIL HERE")
+                let context = appDelegate.persistentContainer.viewContext
+                //print("NO ERRORS UNTIL HERE2")
+                let entity = NSEntityDescription.entity(forEntityName: "Users", in: context)
+                //print("NO ERRORS UNTIL HERE3")
+                let newUser = NSManagedObject(entity: entity!, insertInto: context)
+                //print("NO ERRORS UNTIL HERE4")
+                var newString = String(self.currentPointValue + 5)
+                newUser.setValue(newString, forKey: "current")
+                //print("WOW NICE")
+                do {
+                    try context.save()
+                    print("Saved properly")
+                } catch {
+                    print("Failed saving")
+                }
             }))
             self.present(alert, animated: true, completion: nil)
         }
@@ -83,6 +104,27 @@ class submitWaitViewController: UIViewController, UIPickerViewDelegate, UIPicker
         //Figure this out on the actual device
 //        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
 //        view.addGestureRecognizer(tap)
+        
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Users")
+        //request.predicate = NSPredicate(format: "age = %@", "12")
+        request.returnsObjectsAsFaults = false
+        do {
+            guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+                return
+            }
+            let context = appDelegate.persistentContainer.viewContext
+            let result = try context.fetch(request)
+            for data in result as! [NSManagedObject] {
+                print("Printing value...")
+                if(data.value(forKey: "current") != nil){
+                    self.currentPointValue = Int(data.value(forKey: "current") as! String)
+                }
+                //print(data.value(forKey: "current"))
+            }
+            
+        } catch {
+            print("Failed")
+        }
     }
     
     //causing issues for some reason

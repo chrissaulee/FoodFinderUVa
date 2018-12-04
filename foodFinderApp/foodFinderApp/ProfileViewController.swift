@@ -8,11 +8,13 @@
 
 import UIKit
 import MobileCoreServices
+import CoreData
 
 
 class ProfileViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     @IBOutlet weak var imageView: UIImageView!
     var newMedia: Bool?
+    @IBOutlet weak var currentPoints: UILabel!
     
     
     @IBAction func addName(_ sender: UIButton) {
@@ -99,6 +101,28 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UIImagePicke
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Users")
+        //request.predicate = NSPredicate(format: "age = %@", "12")
+        request.returnsObjectsAsFaults = false
+        do {
+            guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+                return
+            }
+            let context = appDelegate.persistentContainer.viewContext
+            let result = try context.fetch(request)
+            for data in result as! [NSManagedObject] {
+                print("Printing value...")
+                if(data.value(forKey: "current") != nil){
+                    print("if statement triggered")
+                    currentPoints.text = data.value(forKey: "current") as! String
+                }
+                print(data.value(forKey: "current"))
+            }
+            
+        } catch {
+            print("Failed")
+        }
         
     }
     

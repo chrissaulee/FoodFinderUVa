@@ -16,6 +16,7 @@
 		C8547621219E2BB6005D77F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C854761F219E2BB6005D77F4 /* LaunchScreen.storyboard */; };
 		C8547629219E54F8005D77F4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8547628219E54F8005D77F4 /* HomeViewController.swift */; };
 		C854762B219E599F005D77F4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C854762A219E599F005D77F4 /* ProfileViewController.swift */; };
+		C859C3F821B6F01200B4419B /* myModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C859C3F621B6F01200B4419B /* myModel.xcdatamodeld */; };
 		C8B2052721B5FC6400E149CE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C8B2052621B5FC6400E149CE /* GoogleService-Info.plist */; };
 		C8B2052921B603DD00E149CE /* submitWaitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B2052821B603DD00E149CE /* submitWaitViewController.swift */; };
 		C8D5284121AF84B8005352AE /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D5284021AF84B8005352AE /* AboutViewController.swift */; };
@@ -40,6 +41,7 @@
 		C8547622219E2BB6005D77F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C8547628219E54F8005D77F4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C854762A219E599F005D77F4 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		C859C3F721B6F01200B4419B /* myModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = myModel.xcdatamodel; sourceTree = "<group>"; };
 		C8B2052621B5FC6400E149CE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C8B2052821B603DD00E149CE /* submitWaitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = submitWaitViewController.swift; sourceTree = "<group>"; };
 		C8D5284021AF84B8005352AE /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 		C8547615219E2BB5005D77F4 /* foodFinderApp */ = {
 			isa = PBXGroup;
 			children = (
+				C859C3F621B6F01200B4419B /* myModel.xcdatamodeld */,
 				C8547616219E2BB5005D77F4 /* AppDelegate.swift */,
 				C854761A219E2BB5005D77F4 /* Main.storyboard */,
 				C854761D219E2BB6005D77F4 /* Assets.xcassets */,
@@ -279,6 +282,7 @@
 				46C83D4721B497860068FA95 /* FiveGuysViewController.swift in Sources */,
 				C854762B219E599F005D77F4 /* ProfileViewController.swift in Sources */,
 				C8B2052921B603DD00E149CE /* submitWaitViewController.swift in Sources */,
+				C859C3F821B6F01200B4419B /* myModel.xcdatamodeld in Sources */,
 				C8D5284121AF84B8005352AE /* AboutViewController.swift in Sources */,
 				C8547629219E54F8005D77F4 /* HomeViewController.swift in Sources */,
 			);
@@ -480,6 +484,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C859C3F621B6F01200B4419B /* myModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C859C3F721B6F01200B4419B /* myModel.xcdatamodel */,
+			);
+			currentVersion = C859C3F721B6F01200B4419B /* myModel.xcdatamodel */;
+			path = myModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = C854760B219E2BB5005D77F4 /* Project object */;
 }

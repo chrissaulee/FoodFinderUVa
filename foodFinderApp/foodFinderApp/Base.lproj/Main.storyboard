@@ -219,7 +219,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Az8-uf-l3B">
-                                <rect key="frame" x="219" y="378" width="11" height="21"/>
+                                <rect key="frame" x="204" y="378" width="79" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -245,6 +245,7 @@
                         <viewLayoutGuide key="safeArea" id="L92-1k-OfY"/>
                     </view>
                     <connections>
+                        <outlet property="currentPoints" destination="Az8-uf-l3B" id="qj4-xI-rMC"/>
                         <outlet property="imageView" destination="2oR-xG-Ybq" id="v2V-ex-tNG"/>
                     </connections>
                 </viewController>
@@ -907,6 +908,6 @@
         <image name="therealtea" width="711" height="166.5"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Ih0-vO-Y2I"/>
+        <segue reference="VXK-mG-cgk"/>
     </inferredMetricsTieBreakers>
 </document>
