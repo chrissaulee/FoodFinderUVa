@@ -65,6 +65,12 @@ class submitWaitViewController: UIViewController, UIPickerViewDelegate, UIPicker
         } else {
             self.ref.child("places/bros").setValue(waitTime)
         }
+            print("here")
+            let alert = UIAlertController(title: "Thanks!", message: "Your wait has been added.", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Get Points", style: UIAlertAction.Style.default, handler: { [weak alert] (_) in
+                print("add 5")
+            }))
+            self.present(alert, animated: true, completion: nil)
         }
     }
     override func viewDidLoad() {

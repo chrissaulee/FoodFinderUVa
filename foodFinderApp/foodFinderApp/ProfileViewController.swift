@@ -14,8 +14,23 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UIImagePicke
     @IBOutlet weak var imageView: UIImageView!
     var newMedia: Bool?
     
+    
+    @IBAction func addName(_ sender: UIButton) {
+        let alert = UIAlertController(title: "Alert", message: "Enter name:", preferredStyle: UIAlertController.Style.alert)
+        alert.addTextField(configurationHandler: {(textField: UITextField!) in
+            textField.placeholder = "Enter text:"
+            textField.delegate = self
+            //textField.isSecureTextEntry = true // for password input
+        })
+        alert.addAction(UIAlertAction(title: "Enter", style: UIAlertAction.Style.default, handler: { [weak alert] (_) in
+            let textField = alert?.textFields![0] // Force unwrapping because we know it exists.
+            print("Text field: \(String(describing: textField?.text))")
+            sender.setTitle(textField?.text, for: [])
+        }))
+        self.present(alert, animated: true, completion: nil)
+        
+    }
     @IBAction func pickImage(_ sender: UITapGestureRecognizer) {
-        print("wow ok this works thank god")
         // Hide the keyboard.
         //UITextField.resignFirstResponder()
         // UIImagePickerController is a view controller that lets a user pick media from their photo library.
@@ -84,6 +99,7 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UIImagePicke
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
     
     override func didReceiveMemoryWarning() {
