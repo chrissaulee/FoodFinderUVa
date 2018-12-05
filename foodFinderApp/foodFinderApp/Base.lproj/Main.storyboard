@@ -311,7 +311,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="12" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Vg-7P-TWG">
                                                 <rect key="frame" x="11" y="352" width="301" height="179"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <string key="text">You get a point every time you input a wait time at a location on grounds. After you reach 500 points, you can show your point score as well as your computing ID at one of the places on grounds and receive a free drink!</string>
+                                                <string key="text">You get 5 points every time you input a wait time at a location on grounds. After you reach 500 points, you can show your point score as well as your computing ID at one of the places on grounds and receive a free drink!</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
