@@ -78,6 +78,7 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UIImagePicke
             let image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
             
             imageView.image = image
+            saveImage(imageName: "profile.png")
             if (newMedia == true) {
                 UIImageWriteToSavedPhotosAlbum(image, self, #selector(ProfileViewController.image(image:didFinishSavingWithError:contextInfo:)), nil)
             }
@@ -97,10 +98,30 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UIImagePicke
             self.present(alert, animated: true, completion: nil)
         }
     }
-
+    
+    func saveImage(imageName: String){
+        //create an instance of the FileManager
+        let fileManager = FileManager.default
+        //get the image path
+        let imagePath = (NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as NSString).appendingPathComponent(imageName)
+        //get the image we took with camera
+        let image = imageView.image!
+        //get the PNG data for this image
+        let data = image.pngData()
+        //store it in the document directory
+        fileManager.createFile(atPath: imagePath as String, contents: data, attributes: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let fileManager = FileManager.default
+        let imagePath = (NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as NSString).appendingPathComponent("profile.png")
+        if fileManager.fileExists(atPath: imagePath){
+            imageView.image = UIImage(contentsOfFile: imagePath)
+        }else{
+            print("Panic! No Image!")
+        }
         
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Users")
         //request.predicate = NSPredicate(format: "age = %@", "12")

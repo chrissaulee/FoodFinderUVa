@@ -114,6 +114,7 @@ class submitWaitViewController: UIViewController, UIPickerViewDelegate, UIPicker
             }
             let context = appDelegate.persistentContainer.viewContext
             let result = try context.fetch(request)
+            self.currentPointValue = 0
             for data in result as! [NSManagedObject] {
                 print("Printing value...")
                 if(data.value(forKey: "current") != nil){

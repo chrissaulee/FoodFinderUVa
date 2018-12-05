@@ -42,7 +42,7 @@
 		C8547628219E54F8005D77F4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C854762A219E599F005D77F4 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		C859C3F721B6F01200B4419B /* myModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = myModel.xcdatamodel; sourceTree = "<group>"; };
-		C8B2052621B5FC6400E149CE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C8B2052621B5FC6400E149CE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C8B2052821B603DD00E149CE /* submitWaitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = submitWaitViewController.swift; sourceTree = "<group>"; };
 		C8D5284021AF84B8005352AE /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		C8D5284221B47DBB005352AE /* GotDumplingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GotDumplingsViewController.swift; sourceTree = "<group>"; };
