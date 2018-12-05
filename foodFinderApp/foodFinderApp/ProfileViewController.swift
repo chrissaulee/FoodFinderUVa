@@ -16,6 +16,7 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UIImagePicke
     var newMedia: Bool?
     @IBOutlet weak var currentPoints: UILabel!
 
+    @IBOutlet weak var nameButton: UIButton!
     @IBAction func addName(_ sender: UIButton) {
         let alert = UIAlertController(title: "Alert", message: "Enter name:", preferredStyle: UIAlertController.Style.alert)
         alert.addTextField(configurationHandler: {(textField: UITextField!) in
@@ -26,6 +27,23 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UIImagePicke
         alert.addAction(UIAlertAction(title: "Enter", style: UIAlertAction.Style.default, handler: { [weak alert] (_) in
             let textField = alert?.textFields![0] // Force unwrapping because we know it exists.
             print("Text field: \(String(describing: textField?.text))")
+            var newString = "Click to add name"
+            if(textField?.text != nil){
+                newString = (textField?.text!)!
+            }
+            guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+                return
+            }
+            let context = appDelegate.persistentContainer.viewContext
+            let entity = NSEntityDescription.entity(forEntityName: "Users", in: context)
+            let newUser = NSManagedObject(entity: entity!, insertInto: context)
+            newUser.setValue(newString, forKey: "name")
+            do {
+                try context.save()
+                print("Saved properly")
+            } catch {
+                print("Failed saving")
+            }
             sender.setTitle(textField?.text, for: [])
         }))
         self.present(alert, animated: true, completion: nil)
@@ -114,6 +132,8 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UIImagePicke
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        nameButton.setTitle("Click to add name", for: [])
+        
         let fileManager = FileManager.default
         let imagePath = (NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as NSString).appendingPathComponent("profile.png")
         if fileManager.fileExists(atPath: imagePath){
@@ -136,6 +156,9 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UIImagePicke
                 if(data.value(forKey: "current") != nil){
                     print("if statement triggered")
                     currentPoints.text = data.value(forKey: "current") as! String
+                }
+                if(data.value(forKey: "name") != nil){
+                    nameButton.setTitle(data.value(forKey:"name") as! String, for: [])
                 }
                 print(data.value(forKey: "current"))
             }

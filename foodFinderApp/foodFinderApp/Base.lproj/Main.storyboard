@@ -254,6 +254,7 @@
                     <connections>
                         <outlet property="currentPoints" destination="Az8-uf-l3B" id="qj4-xI-rMC"/>
                         <outlet property="imageView" destination="2oR-xG-Ybq" id="v2V-ex-tNG"/>
+                        <outlet property="nameButton" destination="Ybd-67-D93" id="hsR-7U-WhB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mEH-zr-i81" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -906,13 +907,13 @@
     </scenes>
     <resources>
         <image name="5guys" width="596" height="84"/>
-        <image name="Image" width="540" height="540"/>
-        <image name="Image-1" width="287" height="215"/>
+        <image name="Image" width="1080" height="1080"/>
+        <image name="Image-1" width="575" height="431"/>
         <image name="bros" width="372" height="239"/>
         <image name="chicflia" width="1450" height="724"/>
         <image name="subway" width="5000" height="1437"/>
-        <image name="takonako" width="1000" height="750"/>
-        <image name="therealtea" width="948" height="222"/>
+        <image name="takonako" width="750" height="562.5"/>
+        <image name="therealtea" width="711" height="166.5"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="VXK-mG-cgk"/>
