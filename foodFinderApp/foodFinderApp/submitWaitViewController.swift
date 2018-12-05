@@ -129,7 +129,7 @@ class submitWaitViewController: UIViewController, UIPickerViewDelegate, UIPicker
     }
     
     //causing issues for some reason
-//    // Call to dismiss the keyboard
+////    // Call to dismiss the keyboard
 //    func dismissKeyboard() {
 //        view.endEditing(true)
 //    }

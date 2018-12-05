@@ -95,7 +95,7 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UIImagePicke
             let image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
             
             imageView.image = image
-            saveImage(imageName: "profile.png")
+            saveImage(imageName: "profile.jpeg")
             if (newMedia == true) {
                 UIImageWriteToSavedPhotosAlbum(image, self, #selector(ProfileViewController.image(image:didFinishSavingWithError:contextInfo:)), nil)
             }
@@ -124,7 +124,7 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UIImagePicke
         //get the image we took with camera
         let image = imageView.image!
         //get the PNG data for this image
-        let data = image.pngData()
+        let data = image.jpegData(compressionQuality: 1.0)
         //store it in the document directory
         fileManager.createFile(atPath: imagePath as String, contents: data, attributes: nil)
     }
@@ -135,7 +135,7 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UIImagePicke
         nameButton.setTitle("Click to add name", for: [])
         
         let fileManager = FileManager.default
-        let imagePath = (NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as NSString).appendingPathComponent("profile.png")
+        let imagePath = (NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as NSString).appendingPathComponent("profile.jpeg")
         if fileManager.fileExists(atPath: imagePath){
             imageView.image = UIImage(contentsOfFile: imagePath)
         }else{
