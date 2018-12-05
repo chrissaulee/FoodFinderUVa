@@ -15,10 +15,10 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBOutlet weak var GPSLabel: UILabel!
     var locationManager:  CLLocationManager?
-    lazy var motionManager = CMMotionManager()
     @IBOutlet weak var minutesToSwitch: UILabel!
     var lat : String = ""
     var long : String = ""
+    let calendar = Calendar.current
     
     // GPS
     func createLocationManager(StartImmediately: Bool){
@@ -44,6 +44,7 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
         //self.navigationController!.navigationBar.isHidden = true;
         self.becomeFirstResponder()
         
+        
         if CLLocationManager.locationServicesEnabled(){
             switch CLLocationManager.authorizationStatus(){
             case .authorizedAlways:
@@ -67,7 +68,26 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
                 alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
             }
         }
-
+        let hour = calendar.component(.hour, from: Date())
+        let minute = calendar.component(.minute, from: Date())
+        if minute >= 0 && minute <= 14{
+            minutesToSwitch.text = String(15-minute)
+        }
+        if minute >= 15 && minute <= 29{
+            minutesToSwitch.text = String(30-minute)
+        }
+        if minute >= 30 && minute <= 44{
+            minutesToSwitch.text = String(45-minute)
+        }
+        if minute >= 45 && minute <= 49{
+            minutesToSwitch.text = String(50-minute)
+        }
+        if minute >= 51 && minute <= 59{
+            minutesToSwitch.text = String(59-minute)
+        }
+        if hour < 8 || hour >= 21{
+            minutesToSwitch.text = "No Classes"
+        }
         // Do any additional setup after loading the view.
         
     }

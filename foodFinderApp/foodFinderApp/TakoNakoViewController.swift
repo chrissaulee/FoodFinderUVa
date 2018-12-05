@@ -66,6 +66,7 @@ class TakoNakoViewController: UIViewController {
                     let json = try JSONSerialization.jsonObject(with:  data!, options:.allowFragments) as! [String:  AnyObject]
                     let routes = json["routes"] as! NSArray
                     
+                    
                     OperationQueue.main.addOperation ({
                         for route in routes{
                             let routeOverviewPolyline:NSDictionary = (route as! NSDictionary).value(forKey: "overview_polyline") as! NSDictionary

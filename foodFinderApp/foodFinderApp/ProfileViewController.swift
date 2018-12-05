@@ -15,8 +15,7 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UIImagePicke
     @IBOutlet weak var imageView: UIImageView!
     var newMedia: Bool?
     @IBOutlet weak var currentPoints: UILabel!
-    
-    
+
     @IBAction func addName(_ sender: UIButton) {
         let alert = UIAlertController(title: "Alert", message: "Enter name:", preferredStyle: UIAlertController.Style.alert)
         alert.addTextField(configurationHandler: {(textField: UITextField!) in
@@ -145,6 +144,7 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UIImagePicke
             print("Failed")
         }
         
+
     }
     
     override func didReceiveMemoryWarning() {
