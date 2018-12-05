@@ -102,8 +102,8 @@ class submitWaitViewController: UIViewController, UIPickerViewDelegate, UIPicker
         self.numMinutes.keyboardType = UIKeyboardType.numberPad
         // Will dismiss the keyboard on any tap
         //Figure this out on the actual device
-//        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
-//        view.addGestureRecognizer(tap)
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(submitWaitViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
         
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Users")
         //request.predicate = NSPredicate(format: "age = %@", "12")
@@ -134,5 +134,10 @@ class submitWaitViewController: UIViewController, UIPickerViewDelegate, UIPicker
 //        view.endEditing(true)
 //    }
     
+    @objc func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
+    }
+//
 
 }
